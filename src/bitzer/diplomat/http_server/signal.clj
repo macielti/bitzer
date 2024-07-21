@@ -5,8 +5,8 @@
 
 (s/defn create-signal!
   [{{:keys [signal]}    :json-params
-    {:keys [datalevin]} :components}]
+    {:keys [datalevin config]} :components}]
   (let [signal' (adapters.signal/wire->internal signal)]
-    (controllers.signal/create-signal! signal' datalevin)
+    (controllers.signal/create-signal! signal' datalevin config)
     {:status 200
      :body   (adapters.signal/internal->wire signal')}))
