@@ -7,5 +7,5 @@
 (s/defn notify-signal-created!
   [signal :- models.signal/Signal
    {:keys [telegram]}]
-  (morse-api/send-text (:token telegram) #p (:chat-id telegram)
+  (morse-api/send-text (:token telegram) (:chat-id telegram)
                        (str "New Signal created: " signal)))
