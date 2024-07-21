@@ -8,7 +8,8 @@
             [bitzer.diplomat.http-server :as diplomat.http-server]
             [bitzer.diplomat.db.datalevin.config :as database.config]
             [common-clj.component.rate-limiter :as component.rate-limiter]
-            [taoensso.timbre :as timbre]))
+            [taoensso.timbre :as timbre])
+  (:gen-class))
 
 (def rate-limiters-definition
   {:rate-limit (r/rate-limiter-factory :memory
