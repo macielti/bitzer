@@ -1,6 +1,8 @@
 (ns bitzer.models.signal
-  (:require [schema.core :as s])
-  (:import (java.time LocalDateTime)))
+  (:require
+   [schema.core :as s])
+  (:import
+   (java.time LocalDateTime)))
 
 (def signal-skeleton
   {:signal/id           s/Uuid

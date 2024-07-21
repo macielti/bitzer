@@ -1,9 +1,10 @@
 (ns bitzer.controllers.signal
-  (:require [schema.core :as s]
-            [bitzer.models.signal :as models.signal]
-            [bitzer.diplomat.db.datalevin.signal :as database.signal]
-            [bitzer.diplomat.telegram.producer :as diplomat.telegram.producer]
-            [taoensso.timbre :as log]))
+  (:require
+   [bitzer.diplomat.db.datalevin.signal :as database.signal]
+   [bitzer.diplomat.telegram.producer :as diplomat.telegram.producer]
+   [bitzer.models.signal :as models.signal]
+   [schema.core :as s]
+   [taoensso.timbre :as log]))
 
 (s/defn create-signal!
   [signal :- models.signal/Signal

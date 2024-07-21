@@ -1,5 +1,6 @@
 (ns bitzer.wire.in.signal
-  (:require [schema.core :as s]))
+  (:require
+   [schema.core :as s]))
 
 (def contact-type (s/enum "email" "phone"))
 

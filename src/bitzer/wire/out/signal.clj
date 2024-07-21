@@ -1,5 +1,6 @@
 (ns bitzer.wire.out.signal
-  (:require [schema.core :as s]))
+  (:require
+   [schema.core :as s]))
 
 (def signal-skeleton
   {:signal/id                            s/Str

@@ -1,7 +1,9 @@
 (ns bitzer.wire.datalevin.signal
-  (:require [schema.core :as s]
-            [bitzer.models.signal :as models.signal])
-  (:import (java.util Date)))
+  (:require
+   [bitzer.models.signal :as models.signal]
+   [schema.core :as s])
+  (:import
+   (java.util Date)))
 
 (def signal-skeleton
   {:signal/id           {:db/valueType :db.type/uuid
@@ -16,4 +18,4 @@
 
 (s/defschema Signal
   (assoc models.signal/Signal
-    :signal/created-at Date))
+         :signal/created-at Date))
